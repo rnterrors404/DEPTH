@@ -5,3 +5,6 @@ from django.http import HttpResponse
 def index(request):
     template = loader.get_template("index.html")
     return HttpResponse(template.render({}, request))
+
+def sign_up(request):
+    return render(request, "sign_up.html")
