@@ -99,6 +99,10 @@
         margin-left: 800px;
         margin-top: -500px;
     }
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
     
 
 </style>
@@ -108,7 +112,7 @@
             <li class="left"><img class="image" src="{% static 'images/logo_cropped.png' %}" alt=""></li>
             <li class="left"><h2>DEPTH</h2></li>
             <li class="right"><button><h2> Contact US </h2></button></li>        
-            <li class="right"><button><h2> About US </h2></button></li>
+            <li class="right"><button><a href="{% url 'about_us' %}"><h2> About US </h2></a></button></li>
             <li class="right"><button><h2> Need Help? </h2></button></li>
         </ul>
     </div>
@@ -120,7 +124,7 @@
 
     <div class="navg">
         <button><a href="{% url 'sign_up' %}">Sign up</a></button>
-        <button class="log"><a class="login" href="">Log in</a></button>
+        <button class="log"><a class="login" href="{% url 'login_page' %}">Log in</a></button>
     </div>
 
     <div class="rig">

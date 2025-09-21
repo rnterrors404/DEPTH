@@ -1,0 +1,295 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- AOS CSS (for scroll animations) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #3a3a3a);
+      color: white;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    /* Navbar */
+    .im {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .header {
+      font-size: 60px;
+    }
+
+    .list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .list li {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .list li:hover {
+      color: #00eaff;
+    }
+
+    /* Glass container */
+    .container {
+      height: 700px;
+      width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      /* Glass Effect */
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(12px) saturate(150%);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+    }
+
+    .dummy {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+    }
+
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 30px;
+      gap: 50px;
+      color: white;
+    }
+
+    .suraj {
+      height: 500px;
+      border-radius: 15px;
+      flex-shrink: 0;
+    }
+
+    .info {
+      font-size: 28px;
+      line-height: 1.6;
+      max-width: 350px;
+      text-align: left;
+      margin: 0;
+    }
+
+    .ctao {
+      background-color: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(12px) saturate(150%);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 20px;
+    }
+
+    .ctao h1 {
+      font-size: 50px;      
+      text-align: center;
+    }
+
+    .ctao p {
+      text-align: center;
+      margin-top: -4vh;
+    }
+
+    /* Mission & Vision Section */
+    .mv-section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .mv-section h2 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00eaff;
+    }
+
+    .mv-section p {
+      font-size: 22px;
+      line-height: 1.8;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div class="ctao">
+    <div class="im">
+      <div class="left-section">
+        <img src="{% static 'images/logo_cropped.png' %}" alt="Logo" style="height:80px;">
+        <div class="header" id="head_text"></div>
+      </div>
+      <ul class="list">
+        <li>Contact Us</li>
+        <li><u>About Us</u></li>
+        <li>Need Help</li>
+      </ul>
+    </div> 
+    <h1>About us</h1>
+    <p id="ctao_p"></p>
+  </div> 
+    
+  <!-- Employee Glass Carousel -->
+  <div class="container swiper mySwiper">
+    <div class="dummy"><h1 class="heading-center"><u>Employee</u></h1></div>
+    <div class="swiper-wrapper">
+      <!-- Employee 1 -->
+      <div class="swiper-slide">
+        <img class="suraj" src="{% static 'images/suraj.jpg' %}" alt="">
+        <p class="info">
+          Name: - Suraj P <br>
+          Age: - 22yrs <br>
+          Education: - 10th, Diploma <br>
+          Role: - Software Developer
+        </p>
+      </div>
+
+      <!-- Employee 2 -->
+      <div class="swiper-slide">
+        <img class="suraj" src="{% static 'images/shreyas.jpg' %}" alt="">
+        <p class="info">
+          Name: - Shreyas S <br>
+          Age: - 21yrs <br>
+          Education: - 10th, Diploma, B.E <br>
+          Role: - Software Developer
+        </p>
+      </div>
+
+      <!-- Employee 3 -->
+      <div class="swiper-slide">
+        <img class="suraj" src="{% static 'images/morris.jpg' %}" alt="">
+        <p class="info">
+          Name: - Morris <br>
+          Age: - 23yrs <br>
+          Education: - 10th, Diploma <br>
+          Role: - Finance, Advertisement
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission & Vision Section -->
+  <div class="mv-section" data-aos="fade-up">
+    <h2>Our Mission</h2>
+    <p>
+      To empower businesses and individuals by connecting them with the right talent, 
+      providing seamless project management, and fostering innovation to build a sustainable future.
+    </p>
+  </div>
+
+  <div class="mv-section" data-aos="fade-up" data-aos-delay="200">
+    <h2>Our Vision</h2>
+    <p>
+      To be a global leader in talent solutions and project management, 
+      creating opportunities that inspire growth, collaboration, and success for everyone.
+    </p>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+
+    // Typing effect for DEPTH (once)
+    const text1 = "DEPTH";
+    const typingspeed1 = 100;
+    let i1 = 0;
+
+    function type1(callback) {
+      if (i1 < text1.length) {
+        document.getElementById("head_text").innerHTML += text1.charAt(i1);
+        i1++;
+        setTimeout(() => type1(callback), typingspeed1);
+      } else if (callback) {
+        callback();
+      }
+    }
+
+    // Typing effect for CTA paragraph (repeats every 3s)
+    const text2 = "Find talent and get hired and manage project seamlessly on DEPTH";
+    const typingspeed2 = 40;
+    let i2 = 0;
+
+    function type2() {
+      const para = document.getElementById("ctao_p");
+      if (i2 === 0) para.innerHTML = ""; // clear before typing
+      if (i2 < text2.length) {
+        para.innerHTML += text2.charAt(i2);
+        i2++;
+        setTimeout(type2, typingspeed2);
+      } else {
+        // restart after 3s
+        setTimeout(() => {
+          i2 = 0;
+          type2();
+        }, 3000);
+      }
+    }
+
+    // Start typing DEPTH, then the repeating CTA
+    window.onload = function() {
+      type1(type2);
+      AOS.init(); // initialize scroll animations
+    };
+  </script>
+</body>
+</html>
